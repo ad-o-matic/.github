@@ -29,7 +29,7 @@ All 5 single-file MIT-licensed SDKs live in [`ad-o-matic/ad-o-matic-sdk`](https:
 - **Flutter — Android & iOS (`HouseAdBanner.dart`):**
   ```dart
   const HouseAdBanner(
-    packageName: 'com.company.app',
+    packageName: 'com.acme.invoicer',
     bannerText: 'Simple client invoicing on mobile',
     targetAudience: 'freelancers, solo founders, invoicing, 25-44',
   )
@@ -37,14 +37,14 @@ All 5 single-file MIT-licensed SDKs live in [`ad-o-matic/ad-o-matic-sdk`](https:
 - **React Native / Expo (`HouseAdBanner.tsx`):**
   ```tsx
   <HouseAdBanner
-    appId="com.company.app"
+    appId="com.acme.invoicer"
     bannerText="Simple client invoicing on mobile"
     targetAudience="freelancers, solo founders, invoicing, 25-44"
   />
   ```
 - **Hybrid Mobile WebView (`ad-widget.js`):**
   ```html
-  <script src="https://ad-o-matic.com/ad-widget.js" data-app-id="com.company.app" data-banner-text="Short benefit-driven description" data-target-audience="freelancers, solo founders, invoicing"></script>
+  <script src="https://ad-o-matic.com/ad-widget.js" data-app-id="com.acme.invoicer" data-banner-text="Short benefit-driven description" data-target-audience="freelancers, solo founders, invoicing"></script>
   ```
 
 ---
@@ -61,6 +61,19 @@ Published in the Official MCP Registry as `com.ad-o-matic/adomatic`:
     "adomatic": {
       "type": "http",
       "url": "https://ad-o-matic.com/mcp"
+    }
+  }
+}
+```
+
+Or run the published npm stdio bridge (`adomatic-mcp`):
+
+```json
+{
+  "mcpServers": {
+    "adomatic": {
+      "command": "npx",
+      "args": ["-y", "adomatic-mcp"]
     }
   }
 }
